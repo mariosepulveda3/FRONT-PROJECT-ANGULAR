@@ -1,0 +1,5 @@
+<div *ngFor="let book of Books">
+    <p>{{book.name}}</p>
+    <img src="{{book.img}}" alt="{{book.name}}"/>
+    <button routerLink="/characters/{{book.id}}">More info</button>
+</div>

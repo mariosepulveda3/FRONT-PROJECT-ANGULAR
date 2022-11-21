@@ -1,5 +1,7 @@
-<div *ngFor="let book of Books">
-    <p>{{book.name}}</p>
-    <img src="{{book.img}}" alt="{{book.name}}"/>
-    <button routerLink="/characters/{{book.id}}">More info</button>
+<div class="container-books">
+  <div class="books" *ngFor="let book of Books">
+    <h2>{{ book.title }}</h2>
+    <img src="{{ book.image }}" alt="{{ book.title }}" />
+    <button routerLink="/books/{{ book.id }}">Más información</button>
+  </div>
 </div>

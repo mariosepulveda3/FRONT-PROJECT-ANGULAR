@@ -1,3 +1,5 @@
+import { AboutComponent } from './pages/about/about.component';
+import { UpdateBookComponent } from './pages/update-book/update-book.component';
 import { UsersComponent } from './pages/users/users.component';
 import { NewBookComponent } from './pages/new-book/new-book.component';
 import { BooksDetailComponent } from './pages/books-detail/books-detail.component';
@@ -7,15 +9,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { BooksComponent } from './pages/books/books.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'books', component: BooksComponent},
-  {path: 'books/:id', component: BooksDetailComponent},
-  {path: 'newbook', component: NewBookComponent},
-  {path: 'users', component: UsersComponent},
+  { path: '', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'books', component: BooksComponent },
+  { path: 'books/:id', component: BooksDetailComponent },
+  { path: 'newbook', component: NewBookComponent },
+  { path: 'users', component: UsersComponent },
+  { path: 'updateBook/:id', component: UpdateBookComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

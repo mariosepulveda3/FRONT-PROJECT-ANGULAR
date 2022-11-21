@@ -1,3 +1,4 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,7 +11,9 @@ import { BooksDetailComponent } from './pages/books-detail/books-detail.componen
 import { HomeComponent } from './pages/home/home.component';
 import { UsersComponent } from './pages/users/users.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { MainComponent } from './components/main/main.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UpdateBookComponent } from './pages/update-book/update-book.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +25,17 @@ import { MainComponent } from './components/main/main.component';
     HomeComponent,
     UsersComponent,
     FooterComponent,
-    MainComponent
+    UpdateBookComponent,
+    AboutComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

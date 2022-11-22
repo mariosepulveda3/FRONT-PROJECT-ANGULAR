@@ -43,4 +43,27 @@
       }
     }
   }
+
+  @media screen and (max-width: 500px) {
+    padding: 25px;
+    background-color: whitesmoke;
+
+    .who {
+      text-align: center;
+      line-height: 2;
+    }
+
+    .our-library {
+      text-align: center;
+      line-height: 2;
+
+      .right {
+        display: block;
+
+        img {
+          width: 90%;
+        }
+      }
+    }
+  }
 }

@@ -10,7 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class NewBookComponent implements OnInit {
   newBook: any = {
-    name: '',
+    title: '',
     img: '',
     author: '',
     synopsis: '',

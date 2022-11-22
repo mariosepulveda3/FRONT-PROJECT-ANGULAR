@@ -3,4 +3,12 @@ footer {
   justify-content: center;
   color: whitesmoke;
   background-color: rgba(0, 0, 0, 0.37);
+
+  @media screen and (max-width: 500px) {
+    height: 8px;
+
+    p {
+      font-size: 8px;
+    }
+  }
 }

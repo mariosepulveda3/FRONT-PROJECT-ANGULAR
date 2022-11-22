@@ -14,7 +14,6 @@
     width: 15%;
     padding: 1em;
     margin: 10px;
-    border: solid 2px rgba(4, 79, 25, 0.479);
     background: rgba(255, 255, 255, 0.571);
 
     h2 {
@@ -38,6 +37,38 @@
 
       &:hover {
         transform: scale(1.05);
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    background-color: whitesmoke;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+
+    .books {
+      width: 100px;
+      height: 180px;
+      padding: 10px;
+      margin: 5px;
+
+      h2 {
+        font-size: 8px;
+        padding-bottom: 10px;
+      }
+
+      img {
+        width: 100%;
+        height: 80%;
+        padding: 0;
+      }
+
+      button {
+        margin: 0;
+        
+        width: 60%;
+        font-size: 5px;
       }
     }
   }

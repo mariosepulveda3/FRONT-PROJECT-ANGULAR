@@ -9,22 +9,22 @@ export class BooksService {
   constructor(private http: HttpClient) {}
 
   public getAllBooks(): Observable<any> {
-    return this.http.get('http://localhost:3000/books');
+    return this.http.get('https://back-project-angular-fnlk5fxa9-mariosepulveda3.vercel.app/books');
   }
 
   public getBook(id: string): Observable<any> {
-    return this.http.get(`http://localhost:3000/books/id/${id}`);
+    return this.http.get('https://back-project-angular-fnlk5fxa9-mariosepulveda3.vercel.app/books/id/' + id);
   }
 
   public postBook(newBook: any) {
-    return this.http.post('http://localhost:3000/books/create', newBook);
+    return this.http.post('https://back-project-angular-fnlk5fxa9-mariosepulveda3.vercel.app/books/create', newBook);
   }
 
   public deleteBook(id: string) {
-    return this.http.delete('http://localhost:3000/books/delete/' + id);
+    return this.http.delete('https://back-project-angular-fnlk5fxa9-mariosepulveda3.vercel.app/books/delete/' + id);
   }
 
   public putBook(id: string, updatedBook: any) {
-    return this.http.put('http://localhost:3000/books/edit/' + id, updatedBook);
+    return this.http.put('https://back-project-angular-fnlk5fxa9-mariosepulveda3.vercel.app/books/edit/' + id, updatedBook);
   }
 }

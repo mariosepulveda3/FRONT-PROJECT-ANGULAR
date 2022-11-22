@@ -49,4 +49,39 @@
       }
     }
   }
+
+  @media screen and (max-width: 500px) {
+    background-color: whitesmoke;
+    height: 100%;
+    padding: 50px 20px;
+    display: block;
+    text-align: center;
+    line-height: 2;
+
+    img {
+      width: 130px;
+      height: 200px;
+    }
+    .container-info {
+      margin: 0;
+
+      h2 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      .container-buttons {
+        margin-top: 20px;
+
+        button {
+          margin: 0;
+          width: 40%;
+          font-size: 10px;
+        }
+      }
+    }
+  }
 }

@@ -54,4 +54,32 @@
       }
     }
   }
+
+  @media screen and (max-width: 500px) {
+    height: 100vh;
+    padding: 50px 20px;
+    background-color: whitesmoke;
+
+    .container {
+      h1 {
+        color: black;
+        font-size: 20px;
+      }
+
+      form {
+        label {
+          display: block;
+          line-height: 2;
+          
+          input {
+            width: 95%;
+          }
+        }
+
+        h4 {
+          text-align: center;
+        }
+      }
+    }
+  }
 }

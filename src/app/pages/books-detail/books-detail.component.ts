@@ -1,3 +1,4 @@
+import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BooksService } from 'src/app/services/books.service';
@@ -10,10 +11,12 @@ import { BooksService } from 'src/app/services/books.service';
 export class BooksDetailComponent implements OnInit {
   id: any;
   Book: any;
+  // isLogged = false;
   constructor(
     private activatedRoute: ActivatedRoute,
     private bookService: BooksService,
-    private router: Router
+    private router: Router,
+    public authService: AuthService
   ) {
     this.activatedRoute.paramMap.subscribe((params) => {
       this.id = params.get('id');
@@ -24,10 +27,12 @@ export class BooksDetailComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // this.isLogged = this.authService.isLogged();
+  }
 
   deleteBook() {
-    this.bookService.deleteBook(this.id).subscribe();
-    this.router.navigate(['/books']);
+    this.bookService.deleteBook(this.id).subscribe(() => this.router.navigate(['/books']));
+    
   }
 }

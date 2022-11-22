@@ -22,7 +22,7 @@ export class UpdateBookComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe((params) => {
       this.id = params.get('id');
-      this.updatedBook = this.bookService.getBook(this.id).subscribe((data) => {
+      this.bookService.getBook(this.id).subscribe((data) => {
         this.updatedBook = data;
 
         this.bookForm = this.formBuilder.group({
@@ -42,7 +42,7 @@ export class UpdateBookComponent implements OnInit {
 
   onFileChange(event: any) {
     const file = event.target.files[0];
-    console.log(file);
+    // console.log(file);
     this.bookForm.patchValue({
       img: file,
     });
@@ -58,6 +58,7 @@ export class UpdateBookComponent implements OnInit {
       'datePublication',
       this.bookForm.get('datePublication')?.value
     );
+
     this.bookService
       .putBook(this.id, formData)
       .subscribe(() => this.router.navigate(['/books']));

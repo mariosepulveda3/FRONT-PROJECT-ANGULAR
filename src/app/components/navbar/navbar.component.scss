@@ -10,12 +10,13 @@ nav {
   background: rgba(77, 51, 20, 0.546);
 
   @media screen and (max-width: 500px) {
-    width: 100%;
+    width: 90%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     margin: 0px;
-    padding: 20px 0px;    
+    padding: 20px;    
   }
 
   .container-left {
@@ -32,9 +33,10 @@ nav {
   .container-center {
     display: flex;
     justify-content: space-between;
-    width: 600px;
 
     a {
+      text-align: center;
+      width: 150px;
       text-decoration: none;
       color: rgba(4, 79, 25, 0.908);
       &:hover {
@@ -43,33 +45,47 @@ nav {
     }
 
     @media screen and (max-width: 500px) {
-      width: 90%;
+      width: 100%;
       padding-top: 20px;
 
       a {
         font-size: 12px;
-        // color: rgb(130, 231, 109);
       }
-      
     }
   }
 
   .users {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-evenly;
     width: 190px;
 
     p {
       color: whitesmoke;
     }
 
+    a {
+      text-align: center;
+      // width: 200px;
+      text-decoration: none;
+      color: rgba(4, 79, 25, 0.908);
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+
     @media screen and (max-width: 500px) {
-      width: 40%;
+      width: 50%;
+      padding-top: 20px;
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
+      justify-content: space-evenly;
+
+      a {
+        font-size: 12px;
+      }
 
       p {
-        color: transparent;
+        font-size: 10px;
       }
     }
   }

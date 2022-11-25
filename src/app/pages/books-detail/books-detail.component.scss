@@ -1,92 +1,112 @@
 .books-detail {
   height: 80vh;
   width: 100%;
-  // padding: 100px 200px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url("https://www.stanislauslibrary.org/images/button_catalog.jpg");
+  background-size: cover;
+  background-position: center;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
-  img {
-    width: 300px;
-    height: 420px;
-    border: solid 2px whitesmoke;
-    border-radius: 5px;
-  }
-
-  .container-info {
-    margin-left: 50px;
+  .container {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.837);
 
-    h2 {
-      font-size: 30px;
+    img {
+      width: 300px;
+      height: 420px;
+      border: solid 2px rgb(62, 42, 16);
+      border-radius: 5px;
     }
 
-    h4 {
-      padding-top: 20px;
-      font-weight: bold;
-    }
-
-    p {
-      font-size: 14px;
-      line-height: 2;
-      padding-block: 5px;
-    }
-
-    .container-buttons {
+    .container-info {
+      margin-left: 50px;
       display: flex;
-      justify-content: space-around;
-      margin-top: 30px;
+      flex-direction: column;
+      flex-wrap: wrap;
 
-      button {
-        width: 100px;
-        border-radius: 2px;
-        border-color: rgba(77, 51, 20, 0.546);
-        color: whitesmoke;
-        background: rgba(77, 51, 20, 0.956);
-        cursor: pointer;
+      h2 {
+        color: rgb(62, 42, 16);
+        font-size: 30px;
+        text-align: center;
+        padding-bottom: 30px;
+      }
 
-        &:hover {
-          transform: scale(1.05);
+      h4 {
+        padding-top: 20px;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 2;
+        padding-block: 5px;
+      }
+
+      .container-buttons {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+
+        button {
+          width: 100px;
+          border-radius: 2px;
+          border-color: rgba(77, 51, 20, 0.546);
+          color: whitesmoke;
+          background: rgba(77, 51, 20, 0.956);
+          cursor: pointer;
+
+          &:hover {
+            transform: scale(1.05);
+          }
         }
       }
     }
   }
 
   @media screen and (max-width: 500px) {
-    background-color: whitesmoke;
     height: 100%;
     padding-block: 50px;
-    display: block;
     text-align: center;
     line-height: 2;
 
-    img {
-      width: 130px;
-      height: 200px;
-    }
-    .container-info {
-      margin: 0;
-      background-color: rgba(255, 255, 255, 0.837);
-      border-radius: 10px;
+    .container {
+      display: block;
 
-      h2 {
-        font-size: 20px;
+      img {
+        width: 130px;
+        height: 200px;
       }
+      .container-info {
+        margin: 0;
+        border-radius: 10px;
 
-      p {
-        font-size: 12px;
-      }
+        h2 {
+          font-size: 17px;
+          padding: 0;
+        }
 
-      .container-buttons {
-        margin-top: 20px;
+        h4 {
+          font-size: 13px;
+        }
 
-        button {
-          margin: 0;
-          width: 40%;
-          font-size: 10px;
+        p {
+          font-size: 12px;
+        }
+
+        .container-buttons {
+          margin-top: 20px;
+
+          button {
+            font-size: 12px;
+          }
         }
       }
     }

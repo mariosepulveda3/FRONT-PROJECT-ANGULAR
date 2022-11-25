@@ -1,14 +1,16 @@
 <div class="books-detail">
-  <img src="{{ Book?.img }}" alt="{{ Book?.title }}" />
-  <div class="container-info">
-    <h2>{{ Book?.title }}</h2>
-    <h4>Sinopsis</h4>
-    <p>{{ Book?.synopsis }}</p>
-    <h4>Autor</h4>
-    <p>{{ Book?.author }}</p>
-    <div *ngIf="authService.isLoggedIn" class="container-buttons">
-      <button (click)="deleteBook()">Eliminar Libro</button>
-      <button routerLink="/updateBook/{{ Book?._id }}">Editar</button>
+  <div class="container">
+    <img src="{{ Book?.img }}" alt="{{ Book?.title }}" />
+    <div class="container-info">
+      <h2>{{ Book?.title }}</h2>
+      <h4>Sinopsis</h4>
+      <p>{{ Book?.synopsis }}</p>
+      <h4>Autor</h4>
+      <p>{{ Book?.author }}</p>
+      <div *ngIf="authService.isLoggedIn" class="container-buttons">
+        <button (click)="deleteBook()">Eliminar Libro</button>
+        <button routerLink="/updateBook/{{ Book?._id }}">Editar</button>
+      </div>
     </div>
   </div>
 </div>

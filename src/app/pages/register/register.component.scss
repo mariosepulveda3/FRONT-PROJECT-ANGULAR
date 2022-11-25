@@ -10,11 +10,14 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
   .container {
-    text-align: center;
-    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 
     form {
       display: block;
+      width: 500px;
       border-radius: 20px;
       padding: 20px;
       background-color: rgba(255, 255, 255, 0.837);
@@ -38,7 +41,7 @@
         font-size: 15px;
         border-radius: 10px;
         text-align: center;
-        width: 300px;
+        width: 250px;
       }
 
       h4 {
@@ -65,27 +68,36 @@
 
   @media screen and (max-width: 500px) {
     height: 100vh;
+    padding-top: 50px;
 
     .container {
-      padding: 50px;
+      align-items: flex-start;
 
       form {
+        width: 220px;
+
         h1 {
           font-weight: bold;
           font-size: 15px;
         }
 
         label {
+          font-size: 12px;
           display: block;
           line-height: 2;
 
           input {
+            font-size: 12px;
             width: 85%;
           }
         }
 
         h4 {
           text-align: center;
+        }
+
+        button {
+          font-size: 12px;
         }
       }
     }

@@ -1,7 +1,7 @@
 <div class="new-book">
   <div class="container">
-    <h1>Añadir libro</h1>
     <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+      <h1>Añadir libro</h1>
       <label>
         Título *
         <input
@@ -12,7 +12,7 @@
       </label>
       <label>
         Imagen *
-        <input type="text" formControlName="img" />
+        <input type="text" formControlName="img" placeholder="URL" />
       </label>
       <label>
         Autor *

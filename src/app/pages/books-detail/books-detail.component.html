@@ -6,8 +6,6 @@
     <p>{{ Book?.synopsis }}</p>
     <h4>Autor</h4>
     <p>{{ Book?.author }}</p>
-    <h4>Fecha de Publicación</h4>
-    <p>{{ Book?.datePublicated }}</p>
     <div *ngIf="authService.isLoggedIn" class="container-buttons">
       <button (click)="deleteBook()">Eliminar Libro</button>
       <button routerLink="/updateBook/{{ Book?._id }}">Editar</button>

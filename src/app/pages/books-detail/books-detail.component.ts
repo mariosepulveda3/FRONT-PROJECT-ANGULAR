@@ -11,7 +11,7 @@ import { BooksService } from 'src/app/services/books.service';
 export class BooksDetailComponent implements OnInit {
   id: any;
   Book: any;
-  // isLogged = false;
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private bookService: BooksService,
@@ -27,12 +27,11 @@ export class BooksDetailComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-    // this.isLogged = this.authService.isLogged();
-  }
+  ngOnInit(): void {}
 
   deleteBook() {
-    this.bookService.deleteBook(this.id).subscribe(() => this.router.navigate(['/books']));
-    
+    this.bookService
+      .deleteBook(this.id)
+      .subscribe(() => this.router.navigate(['/books']));
   }
 }

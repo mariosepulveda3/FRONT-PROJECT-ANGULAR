@@ -18,7 +18,7 @@ nav {
     flex-direction: column;
     flex-wrap: wrap;
     margin: 0px;
-    padding: 10px 0px;    
+    padding: 10px 0px;
   }
 
   .container-left {
@@ -98,10 +98,9 @@ nav {
     }
 
     @media screen and (max-width: 500px) {
-      font-size: 10px;
-      color: black;
-      background: rgb(81, 255, 81);
-      align-items: center;
+      margin-top: 20px;
+      width: 40%;
+      font-size: 12px;
     }
   }
 }

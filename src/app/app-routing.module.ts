@@ -13,12 +13,20 @@ import { BooksComponent } from './pages/books/books.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'books', component: BooksComponent},
+  { path: 'books', component: BooksComponent },
   { path: 'books/:id', component: BooksDetailComponent },
-  { path: 'newbook', component: NewBookComponent, canActivate: [AuthUserGuard]},
-  { path: 'updateBook/:id', component: UpdateBookComponent, canActivate: [AuthUserGuard] },
+  {
+    path: 'newbook',
+    component: NewBookComponent,
+    canActivate: [AuthUserGuard],
+  },
+  {
+    path: 'updateBook/:id',
+    component: UpdateBookComponent,
+    canActivate: [AuthUserGuard],
+  },
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent }
+  { path: 'register', component: RegisterComponent },
 ];
 
 @NgModule({

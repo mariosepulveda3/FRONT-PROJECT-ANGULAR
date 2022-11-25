@@ -4,15 +4,16 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  background-image: url("../../../assets/library1.png");
-    background-size: cover;
-    background-position: center;
+  background-image: url("https://www.stanislauslibrary.org/images/button_catalog.jpg");
+  background-size: cover;
+  background-position: center;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   .who {
-    background-color: rgba(255, 255, 255, 0.77);
+    background-color: rgba(255, 255, 255, 0.837);
     text-align: center;
     padding: 10px;
+    border-radius: 20px;
 
     h3 {
       font-size: 20px;
@@ -29,8 +30,9 @@
 
   .our-library {
     margin-top: 20px;
-    background-color: rgba(255, 255, 255, 0.77);
+    background-color: rgba(255, 255, 255, 0.837);
     padding: 10px;
+    border-radius: 20px;
     h2 {
       color: rgb(62, 42, 16);
       text-align: center;
@@ -52,17 +54,17 @@
 
       img {
         width: 400px;
-        border: solid rgb(62, 42, 16);;
+        border: solid rgb(62, 42, 16);
+        border-radius: 20px;
       }
     }
   }
 
   @media screen and (max-width: 500px) {
     padding: 25px;
-    background-color: whitesmoke;
+    background-color: rgba(255, 255, 255, 0.837);
 
     .who {
-
       p {
         font-size: 13px;
       }
@@ -80,7 +82,7 @@
         }
 
         img {
-          width: 100%;
+          width: 90%;
         }
       }
     }

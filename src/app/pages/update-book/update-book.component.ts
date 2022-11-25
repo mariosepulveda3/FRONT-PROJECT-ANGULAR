@@ -30,7 +30,6 @@ export class UpdateBookComponent implements OnInit {
           img: [this.updatedBook.img, [Validators.required]],
           author: [this.updatedBook.author, [Validators.required]],
           synopsis: [this.updatedBook.synopsis],
-          datePublication: [this.updatedBook.datePublication],
         });
       });
     });
@@ -42,7 +41,6 @@ export class UpdateBookComponent implements OnInit {
 
   onFileChange(event: any) {
     const file = event.target.files[0];
-    // console.log(file);
     this.bookForm.patchValue({
       img: file,
     });
@@ -54,10 +52,6 @@ export class UpdateBookComponent implements OnInit {
     formData.append('title', this.bookForm.get('title')?.value);
     formData.append('author', this.bookForm.get('author')?.value);
     formData.append('synopsis', this.bookForm.get('synopsis')?.value);
-    formData.append(
-      'datePublication',
-      this.bookForm.get('datePublication')?.value
-    );
 
     this.bookService
       .putBook(this.id, formData)

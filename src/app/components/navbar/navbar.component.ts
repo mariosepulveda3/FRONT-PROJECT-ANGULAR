@@ -7,12 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  // isLogged = false;
   constructor(public authService: AuthService) {}
 
-  ngOnInit(): void {
-    // this.isLogged = this.authService.isLogged();
-  }
+  ngOnInit(): void {}
 
   logout() {
     this.authService.logout();

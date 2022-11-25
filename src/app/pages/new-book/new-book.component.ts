@@ -14,9 +14,6 @@ export class NewBookComponent implements OnInit {
     img: '',
     author: '',
     synopsis: '',
-    numberPages: '',
-    editorial: '',
-    datePublication: '',
   };
 
   bookForm!: FormGroup;
@@ -33,7 +30,6 @@ export class NewBookComponent implements OnInit {
       img: ['', [Validators.required]],
       author: ['', [Validators.required]],
       synopsis: [''],
-      datePublication: [''],
     });
 
     this.bookForm.valueChanges.subscribe((changes) => {
@@ -56,10 +52,6 @@ export class NewBookComponent implements OnInit {
     formData.append('title', this.bookForm.get('title')?.value);
     formData.append('author', this.bookForm.get('author')?.value);
     formData.append('synopsis', this.bookForm.get('synopsis')?.value);
-    formData.append(
-      'datePublication',
-      this.bookForm.get('datePublication')?.value
-    );
     this.bookService.postBook(formData).subscribe();
     this.router.navigate(['/books']);
   }

@@ -2,7 +2,7 @@
   height: 80vh;
   width: 100%;
   align-items: center;
-  background-image: url("../../../assets/library1.png");
+  background-image: url("https://www.stanislauslibrary.org/images/button_catalog.jpg");
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -17,7 +17,7 @@
       display: block;
       border-radius: 20px;
       padding: 20px;
-      background-color: rgba(255, 255, 255, 0.716);
+      background-color: rgba(255, 255, 255, 0.837);
 
       h1 {
         color: rgb(62, 42, 16);
@@ -70,7 +70,6 @@
       padding: 50px;
 
       form {
-
         h1 {
           font-weight: bold;
           font-size: 15px;
@@ -79,7 +78,7 @@
         label {
           display: block;
           line-height: 2;
-          
+
           input {
             width: 85%;
           }
@@ -91,4 +90,4 @@
       }
     }
   }
-  }
+}

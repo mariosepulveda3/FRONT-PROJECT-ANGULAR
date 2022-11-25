@@ -46,13 +46,13 @@ export class NewBookComponent implements OnInit {
   }
 
   onSubmit() {
-    this.bookService.postBook(this.newBook).subscribe();
     const formData = new FormData();
     formData.append('img', this.bookForm.get('img')?.value);
     formData.append('title', this.bookForm.get('title')?.value);
     formData.append('author', this.bookForm.get('author')?.value);
     formData.append('synopsis', this.bookForm.get('synopsis')?.value);
-    this.bookService.postBook(formData).subscribe();
-    this.router.navigate(['/books']);
+    this.bookService.postBook(formData).subscribe(() => {
+      this.router.navigate(['/books'])
+    });
   }
 }
